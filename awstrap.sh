@@ -58,4 +58,10 @@ echo "source ~/liquidprompt/liquidprompt" ~/.bashrc
 echo "[ -f ~/.bash_aliases ] && source ~/.bash_aliases" ~/.bashrc
 echo "[ -f ~/bin/.scripts/utils.sh ] && source ~/bin/.scripts/utils.sh" ~/.bashrc
 echo "[ -f ~/.bash_functions ] && source ~/.bash_functions" ~/.bashrc
+cd ~
+source ~/bin/utils.sh
+source ~/.bash_aliases
+source ~/.bash_functions
+exe rubystrap.sh
+./rubystrap.sh
 reboot
