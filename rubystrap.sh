@@ -8,6 +8,10 @@ echo "export GEM_HOME=$(ruby -e 'print Gem.user_dir')" >> ~/.bashrc
 touch ~/.gemrc
 gem install bundler
 gem install jekyll
+gem install rake
+gem install rpg-maker-rgss3
+gem install gepub
+gem install sass
 gem update
 exe fontstrap.sh
 ./fontstrap.sh
