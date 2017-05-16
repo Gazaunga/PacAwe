@@ -41,3 +41,8 @@ if [[ "$TERM" == "rxvt-unicode" ]]; then
     export TERM="rxvt-unicode-256color"
 fi
 
+# Auto-complete for sudo, man and pacman when typing <tab>:
+complete -cf sudo
+complete -cf man
+complete -cf pacman
+
