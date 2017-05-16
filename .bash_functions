@@ -111,3 +111,55 @@ stopwatch(){
     sleep 0.1
    done
 }
+
+backup()
+{
+    source="$HOME"
+    target="$1"
+    date=$(date +'%d-%m-%y-%H-%M')
+
+    echo -e "Sauvegarde partition home..."
+
+    borg create --exclude-caches --stats --progress --compression lz4 $target::$date \
+        -e $HOME/Downloads/ \
+        -e $HOME/VirtualBox\ VMs/ \
+        -e $HOME/.PlayOnLinux/ \
+        -e $HOME/.thumbnails/ \
+        -e $HOME/.atom/ \
+        -e $HOME/.cache/ \
+        -e $HOME/.node-gyp/ \
+        -e $HOME/.npm/ \
+        -e $HOME/.nvm/ \
+        -e $HOME/.yarn-cache/ \
+        -e $HOME/.hget/ \
+        -e $HOME/.local/share/Trash/ \
+        -e $HOME/.local/share/Zeal/ \
+        -e $HOME/.pulse/ \
+        -e $HOME/.Wine/ \
+        -e $HOME/.wine/ \
+        -e $HOME/.macromedia/ \
+        -e $HOME/.xsession-errors \
+        -e $HOME/.gvfs/ \
+        -e $HOME/.composer/ \
+        -e $HOME/.viminfo \
+        -e $HOME/.xsession-errors.old \
+        -e $HOME/.dbus/ \
+        -e $HOME/.Xauthority \
+        -e $HOME/.ICEauthority \
+        -e $HOME/.gnome2/ \
+        -e $HOME/.gradle/ \
+        -e $HOME/.android/ \
+        -e $HOME/.AndroidStudioPreview/ \
+        -e $HOME/.vagrant.d/ \
+        -e *node_modules* \
+        $source
+}
+
+if [ ! -d "$1" ]; then
+    echo -e "usage: $0 [target]"
+    exit 1
+fi
+
+backup "$1"
+
+exit 0
