@@ -1,6 +1,4 @@
 #!/bin/bash
-source ~/rubydev/bin/utils/sh
-e_success "Let's grab Ruby and ruby-docs"
 cd ~
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
