@@ -16,3 +16,5 @@ sh $HOME/.fehbg &
 
 # Changes the keyboard  repeat rate
 xset r rate 300 30
+
+exec awesome
