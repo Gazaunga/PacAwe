@@ -44,3 +44,11 @@ alias stopprint="systemctl stop org.cups.cupsd.service"
 
 alias listaliases="alias | sed 's/=.*//'"
 alias listfunctions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'" # show non _prefixed functions
+
+alias ipinfo='curl ipinfo.io'
+
+alias screencast='ffmpeg -f x11grab -r 25 -s 1920x1080 -i :0.0 -vcodec huffyuv screencast.avi'
+
+alias skyrock="mplayer -nocache http://www.skyrock.fm/stream.php/frequenceradio_128mp3.mp3"
+
+
