@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p ~/.config/awesome/
 sudo pacman -Syu --noconfirm -- needed
 pacaur -S --noconfirm --noedit sigil \
   rofi \
