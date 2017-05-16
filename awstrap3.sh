@@ -1,5 +1,18 @@
 #!/bin/bash
 mkdir -p ~/.config/awesome/
+touch .config/awesome/autorun.sh
+sudo chmod +x .config/awesome/autorun.sh
+cd ~/.config/awesome
+cat > autorun.sh <<- "EOF"
+#!/usr/bin/env bash
+function run {
+  if ! pgrep $1 ;
+  then
+    $@&
+  fi
+}
+EOF
+cd ~
 sudo pacman -Syu --noconfirm -- needed
 pacaur -S --noconfirm --noedit sigil \
   rofi \
