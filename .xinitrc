@@ -14,3 +14,5 @@ urxvtd -q -f -o                             # start urxvt server
 
 sh $HOME/.fehbg &
 
+# Changes the keyboard  repeat rate
+xset r rate 300 30
