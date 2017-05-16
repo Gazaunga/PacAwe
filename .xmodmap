@@ -1,0 +1,6 @@
+! Make caps lock act as escape
+keycode 66 = Escape
+
+! Use super keys for ctrl action
+clear Mod4
+add Control = Super_L
