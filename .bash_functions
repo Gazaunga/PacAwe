@@ -91,3 +91,23 @@ function n() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+streamer() { youtube-dl -o - "$1" | mpv - }
+
+downloadAllDocument(){ wget --no-check-certificate -H -r -l 1 -nd -A "$2" "$1"; }
+downloadAllImages(){ wget --no-check-certificate -nd -H -p -A jpg,jpeg,png,gif -e robots=off "$1"; }
+dlmp3(){ wget -r -l1 -H -t1 -nd -N -np -A.mp3 -erobots=off "$1"; }
+
+live() {
+    qemu-img create -f raw live 8G
+    qemu-system-x86_64 -enable-kvm -cpu host -m 4096 -drive file=live,format=raw -cdrom "$1"
+    rm live
+}
+
+stopwatch(){
+  date1=`date +%s`;
+   while true; do
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+    sleep 0.1
+   done
+}
