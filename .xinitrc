@@ -13,6 +13,7 @@ unclutter -root -idle 2 &                   # kill inactive rat cursor
 urxvtd -q -f -o                             # start urxvt server
 
 sh $HOME/.fehbg &
+#wal -i "$(< "${HOME}/.cache/wal/wal")"
 
 # Changes the keyboard  repeat rate
 xset r rate 300 30
