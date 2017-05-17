@@ -155,6 +155,10 @@ backup()
         $source
 }
 
+natlock() {
+	i3lock-fancy -t \\"$(fortune)\\" --scrot
+}
+
 if [ ! -d "$1" ]; then
     echo -e "usage: $0 [target]"
     exit 1
@@ -163,3 +167,5 @@ fi
 backup "$1"
 
 exit 0
+
+
