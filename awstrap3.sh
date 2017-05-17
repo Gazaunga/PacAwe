@@ -28,7 +28,7 @@ pacaur -S --noconfirm --noedit sigil \
   texlive-localmanager-git \
   texlive-most \
   leafpad \
-  youtube-dl i3lock-fancy-git \
+  youtube-dl i3lock-fancy-git fortune \
   mpv \
   inkscape \
   discord \
