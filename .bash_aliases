@@ -52,3 +52,5 @@ alias screencast='ffmpeg -f x11grab -r 25 -s 1920x1080 -i :0.0 -vcodec huffyuv s
 alias skyrock="mplayer -nocache http://www.skyrock.fm/stream.php/frequenceradio_128mp3.mp3"
 
 
+alias unlockdb="sudo rm /var/lib/pacman/db.lck && echo 'Unlocked...'"
+alias connect="nmcli dev wifi connect"
