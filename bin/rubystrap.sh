@@ -2,6 +2,7 @@
 cd ~
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+sudo
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /etc/profile.d/rbenv.sh
 echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
 source /etc/profile
