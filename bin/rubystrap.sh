@@ -30,5 +30,5 @@ sudo gem install --no-user-instal rails rake jekyll bundler
 bundle install --path vendor/bundle 
 sudo gem rdoc --all --ri --no-rdoc
 sudo chmod +x ~/bin/fontstrap.sh
-bash fontstrap.sh
+./fontstrap.sh
 
